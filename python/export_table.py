@@ -1,8 +1,10 @@
 import ezodf
+from VAR import filepath
 
 ezodf.config.set_table_expand_strategy('all')
 
-doc = ezodf.opendoc('/home/pi/Desktop/Associations.ods')
+# doc = ezodf.opendoc('/home/pi/Desktop/Associations.ods')
+doc = ezodf.opendoc(filepath)
 
 associations = doc.sheets['Feuille1']
 semis = doc.sheets['Feuille2']
@@ -54,8 +56,8 @@ for row in range(1, s_row_count):
 print(vegetables)
 
 #print(content[1,4].value)
-       
-    
+
+
 
 
 ezodf.config.reset_table_expand_strategy()
